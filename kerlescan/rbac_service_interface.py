@@ -10,18 +10,11 @@ def get_perms(application, service_auth_key, logger, request_metric, exception_m
     check if user has a permission
     """
 
-    print("-- USING URL: ", config.rbac_svc_hostname)
-    
-
     auth_header = {AUTH_HEADER_NAME: service_auth_key}
-
-    print("-- USING HEADER: ", auth_header)
 
     rbac_location = urljoin(config.rbac_svc_hostname, RBAC_SVC_ENDPOINT) % application
 
     rbac_result = fetch_url(rbac_location, auth_header, logger, request_metric, exception_metric)
     perms = [perm["permission"] for perm in rbac_result["data"]]
 
-    print("-- THOSE ARE THE PERMS: ", perms)
-
-    return [perms]
+    return perms
