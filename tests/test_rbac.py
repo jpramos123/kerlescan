@@ -1,9 +1,11 @@
 import unittest
+
 import mock
-from kerlescan.exceptions import HTTPError
+
 from mock import MagicMock as mm
 
 from kerlescan import view_helpers
+from kerlescan.exceptions import HTTPError
 
 
 class RBACTests(unittest.TestCase):
@@ -20,7 +22,7 @@ class RBACTests(unittest.TestCase):
         mock_request = mm()
         mock_request.path = "/some/path"
         view_helpers.ensure_has_permission(
-            permissions=["myperm:*:*"],
+            permissions=[["myperm:*:*"]],
             application="app",
             app_name="app-name",
             request=mock_request,

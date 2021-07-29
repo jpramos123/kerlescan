@@ -7,10 +7,14 @@ verify_ssl = true
 coverage = "*"
 flake8 = "*"
 mock = "*"
-nose = "*"
+pytest = "*"
+pytest-cov = "*"
+pytest-flask = "*"
+pytest-black = "*"
+pytest-mock = "*"
 responses = "*"
 yamllint = "*"
-black = "==19.3b0"
+black = "==21.6b0"
 
 [packages]
 boto3 = "*"

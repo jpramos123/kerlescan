@@ -12,8 +12,11 @@ DRIFT_SVC_BASELINE_COMPARE_ENDPOINT = (
     DRIFT_SVC_ENDPOINT + "?system_ids[]=%s&baseline_ids[]=%s&short_circuit=True"
 )
 INTERNAL_BASELINE_SVC_ENDPOINT = (
-    "/api/system-baseline/internal/v1/baselines?system_id=%s"
-)  # note missing trailing slash
+    "/api/system-baseline/internal/v1/baselines?system_id=%s"  # note missing trailing slash
+)
+INTERNAL_BASELINE_SVC_DELETE_SYSTEM_ENDPOINT = (
+    "/api/system-baseline/internal/v1/systems/deletion_request"
+)
 SYSTEM_ID_KEY = "id"
 
 COMPARISON_SAME = "SAME"
