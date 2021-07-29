@@ -118,8 +118,6 @@ def ensure_entitled(request, app_name, logger):
 
     auth_key = get_key_from_headers(request.headers)
 
-    print("JOAO: ", auth_key)
-
     # check if the request comes from our own drift service
     if auth_key:
         auth = json.loads(base64.b64decode(auth_key))
