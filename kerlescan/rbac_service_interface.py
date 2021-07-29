@@ -29,4 +29,4 @@ def get_perms(application, service_auth_key, logger, request_metric, exception_m
 
     print("-- THOSE ARE THE PERMS: ", perms)
 
-    return perms
+    return [perms]
